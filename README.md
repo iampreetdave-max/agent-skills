@@ -7,7 +7,7 @@ Skills for Claude Code by [Preet Dave](https://iampreetdave.me). Each one came o
 From your terminal (macOS, Linux, Git Bash, PowerShell 7):
 
 ```
-claude plugin marketplace add iampreetdave-max/agent-skills && claude plugin install all-skills@preet-skills
+claude plugin marketplace add iampreetdave-max/agent-skills && claude plugin install all-skills@iampreetdave-skills
 ```
 
 On Windows PowerShell 5, replace `&&` with `;`. Then restart Claude Code.
@@ -39,16 +39,16 @@ On Windows PowerShell 5, replace `&&` with `;`. Then restart Claude Code.
 
 ```
 /plugin marketplace add iampreetdave-max/agent-skills
-/plugin install senior-pack@preet-skills
+/plugin install senior-pack@iampreetdave-skills
 ```
 
-Or install single skills, for example `/plugin install loop-breaker@preet-skills`. Install one pack or single skills, not several overlapping ones, or the same skill loads twice.
+Or install single skills, for example `/plugin install loop-breaker@iampreetdave-skills`. Install one pack or single skills, not several overlapping ones, or the same skill loads twice.
 
 ## Using them
 
 - Each skill loads by itself when your request matches its description: "verify it before you say done", "I'm stuck, same error again", "find skills for this project".
 - Or call one by name: type `/`, then the install name and the skill, for example `/all-skills:loop-breaker` or `/loop-breaker:loop-breaker`.
-- Get updates with `claude plugin marketplace update preet-skills`. Remove with `claude plugin uninstall <name>@preet-skills`.
+- Get updates with `claude plugin marketplace update iampreetdave-skills`. Remove with `claude plugin uninstall <name>@iampreetdave-skills`.
 
 ## Without the plugin system
 

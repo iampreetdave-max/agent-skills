@@ -45,7 +45,7 @@ rows = "\n".join(f"| {day} | {cell(v, 'clones', 'uniques')} | {cell(v, 'clones',
 first = days[0][0] if days else today
 snap = data["snapshots"][today]
 with open("README.md", "w") as f:
-    f.write(f"""# Install signal for preet-skills
+    f.write(f"""# Install signal for iampreetdave-skills
 
 Every `/plugin marketplace add` or update clones this repo, so **unique cloners** is the closest
 public signal to installs. It also counts updates, CI and bots, and GitHub reports it a day late.
