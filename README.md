@@ -2,10 +2,21 @@
 
 Skills for Claude Code by [Preet Dave](https://iampreetdave.me). Each one came out of real projects where an AI agent kept making the same mistake, and each one is a single `SKILL.md` you can read in a few minutes. One rule runs through all of them: never assume anything.
 
-## Starter packs
+## Install everything with one command
+
+From your terminal (macOS, Linux, Git Bash, PowerShell 7):
+
+```
+claude plugin marketplace add iampreetdave-max/agent-skills && claude plugin install all-skills@preet-skills
+```
+
+On Windows PowerShell 5, replace `&&` with `;`. Then restart Claude Code.
+
+## Packs
 
 | Pack | Skills |
 |---|---|
+| **all-skills** | all nine below |
 | **senior-pack** | done-gate, loop-breaker, skill-scout, doc-extraction, make-automation, honest-model-eval |
 | **student-pack** | hackathon-sprint, exam-sheet, done-gate, loop-breaker |
 
@@ -30,7 +41,13 @@ Skills for Claude Code by [Preet Dave](https://iampreetdave.me). Each one came o
 /plugin install senior-pack@preet-skills
 ```
 
-Or install single skills, for example `/plugin install loop-breaker@preet-skills`. Install a pack or its single skills, not both, or the same skill loads twice. Each skill loads by itself when your request matches its description, or call it by name: plugin name, then skill name, for example `/loop-breaker:loop-breaker`.
+Or install single skills, for example `/plugin install loop-breaker@preet-skills`. Install one pack or single skills, not several overlapping ones, or the same skill loads twice.
+
+## Using them
+
+- Each skill loads by itself when your request matches its description: "verify it before you say done", "I'm stuck, same error again", "find skills for this project".
+- Or call one by name: type `/`, then the install name and the skill, for example `/all-skills:loop-breaker` or `/loop-breaker:loop-breaker`.
+- Get updates with `claude plugin marketplace update preet-skills`. Remove with `claude plugin uninstall <name>@preet-skills`.
 
 ## Without the plugin system
 

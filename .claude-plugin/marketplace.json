@@ -8,6 +8,13 @@
   },
   "plugins": [
     {
+      "name": "all-skills",
+      "description": "Every skill in this repo in one install: done-gate, loop-breaker, skill-scout, doc-extraction, make-automation, honest-model-eval, hackathon-sprint, android-device-test and exam-sheet.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/done-gate", "./skills/loop-breaker", "./skills/skill-scout", "./skills/doc-extraction", "./skills/make-automation", "./skills/honest-model-eval", "./skills/hackathon-sprint", "./skills/android-device-test", "./skills/exam-sheet"]
+    },
+    {
       "name": "senior-pack",
       "description": "Starter pack for working engineers: done-gate, loop-breaker, skill-scout, doc-extraction, make-automation and honest-model-eval in one install.",
       "source": "./",
