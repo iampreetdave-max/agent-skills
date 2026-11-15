@@ -1,0 +1,32 @@
+{
+  "name": "agent-skills",
+  "owner": {
+    "name": "Preet Dave"
+  },
+  "metadata": {
+    "description": "Skills that stop an agent from claiming work it did not finish, test Android apps on real phones, and turn past papers into ranked revision sheets."
+  },
+  "plugins": [
+    {
+      "name": "done-gate",
+      "description": "Verification gate before any work is reported done: the asks rebuilt from the user's words, file:line evidence, a blind subagent audit, and the project's own checks.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/done-gate"]
+    },
+    {
+      "name": "android-device-test",
+      "description": "Test an Android app on a real phone over adb: install, tap real UI elements, kill the network and the process, report pass or fail with screenshots and logcat.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/android-device-test"]
+    },
+    {
+      "name": "exam-sheet",
+      "description": "Turn a syllabus and past papers into one printable revision page, chapters ranked by the marks they actually carried, every topic an exam-ready answer with a diagram.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/exam-sheet"]
+    }
+  ]
+}
