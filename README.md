@@ -16,8 +16,8 @@ On Windows PowerShell 5, replace `&&` with `;`. Then restart Claude Code.
 
 | Pack | Skills |
 |---|---|
-| **all-skills** | all nine below |
-| **senior-pack** | done-gate, loop-breaker, skill-scout, doc-extraction, make-automation, honest-model-eval |
+| **all-skills** | all ten below |
+| **senior-pack** | done-gate, loop-breaker, skill-scout, doc-extraction, make-automation, honest-model-eval, compliance-check |
 | **student-pack** | hackathon-sprint, exam-sheet, done-gate, loop-breaker |
 
 ## The skills
@@ -26,6 +26,7 @@ On Windows PowerShell 5, replace `&&` with `;`. Then restart Claude Code.
 |---|---|
 | [done-gate](skills/done-gate/SKILL.md) | Stops the agent saying "done" when it isn't. Rebuilds the list of asks from your own words, proves each one with `file:line` evidence, has a fresh subagent audit the work without being told what changed, and runs your project's own checks. A missing item is reported as missing. |
 | [loop-breaker](skills/loop-breaker/SKILL.md) | For when the same error keeps coming back. Stops the edits, reproduces the failure by hand, tests every assumption, and proves the root cause with evidence before any fix. If that fails, it writes a handoff for a fresh session on a different model. |
+| [compliance-check](skills/compliance-check/SKILL.md) | Catches compliance gaps before a vibe-coded product ships. Reads the code to see what data it touches and who sees it, asks only what the code can't answer (where users are, minors, payments, health or financial data, AI decisions about people), maps India's DPDP Act, GDPR, the EU AI Act, CCPA, COPPA, HIPAA, PCI DSS, accessibility and messaging consent, and pushes a prioritised fix list with `file:line` evidence. Not legal advice. |
 | [skill-scout](skills/skill-scout/SKILL.md) | Finds skills that fit your project on GitHub and plugin marketplaces, ranked by fit, then health, then stars, with a summary of their open issues and a read of their code. Counts which of your installed skills you actually use (a script reads your local history) and tells you what to remove. Proposes new skills from the corrections you keep repeating. |
 | [doc-extraction](skills/doc-extraction/SKILL.md) | OCR and document extraction whose numbers you can trust. Text layer first, OCR or a vision model only where needed, each page read with context from the one before, deterministic validators (running balance to the cent, checksums, totals) that decide what is correct, one adapter per layout, and human review built in. |
 | [make-automation](skills/make-automation/SKILL.md) | Make.com automations: when to use Make, Python or both together, webhooks between them, Microsoft Teams and other painful APIs, multiple accounts, human approval before anything goes out, never acting twice, dry runs and error handling. |

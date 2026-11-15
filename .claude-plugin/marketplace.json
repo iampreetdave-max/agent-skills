@@ -4,92 +4,143 @@
     "name": "Preet Dave"
   },
   "metadata": {
-    "description": "Skills built from real projects: verify before claiming done, break debugging loops, keep your skill setup lean, trustworthy document extraction, Make.com automation, honest ML evaluation, hackathon sprints, Android device testing and exam revision sheets."
+    "description": "Skills built from real projects: verify before claiming done, break debugging loops, catch compliance gaps, keep your skill setup lean, trustworthy document extraction, Make.com automation, honest ML evaluation, hackathon sprints, Android device testing and exam revision sheets."
   },
   "plugins": [
     {
       "name": "all-skills",
-      "description": "Every skill in this repo in one install: done-gate, loop-breaker, skill-scout, doc-extraction, make-automation, honest-model-eval, hackathon-sprint, android-device-test and exam-sheet.",
+      "description": "Every skill in this repo in one install: done-gate, loop-breaker, skill-scout, doc-extraction, make-automation, honest-model-eval, hackathon-sprint, android-device-test, exam-sheet and compliance-check.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/done-gate", "./skills/loop-breaker", "./skills/skill-scout", "./skills/doc-extraction", "./skills/make-automation", "./skills/honest-model-eval", "./skills/hackathon-sprint", "./skills/android-device-test", "./skills/exam-sheet"]
+      "skills": [
+        "./skills/done-gate",
+        "./skills/loop-breaker",
+        "./skills/skill-scout",
+        "./skills/doc-extraction",
+        "./skills/make-automation",
+        "./skills/honest-model-eval",
+        "./skills/hackathon-sprint",
+        "./skills/android-device-test",
+        "./skills/exam-sheet",
+        "./skills/compliance-check"
+      ]
     },
     {
       "name": "senior-pack",
-      "description": "Starter pack for working engineers: done-gate, loop-breaker, skill-scout, doc-extraction, make-automation and honest-model-eval in one install.",
+      "description": "Starter pack for working engineers: done-gate, loop-breaker, skill-scout, doc-extraction, make-automation, honest-model-eval and compliance-check in one install.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/done-gate", "./skills/loop-breaker", "./skills/skill-scout", "./skills/doc-extraction", "./skills/make-automation", "./skills/honest-model-eval"]
+      "skills": [
+        "./skills/done-gate",
+        "./skills/loop-breaker",
+        "./skills/skill-scout",
+        "./skills/doc-extraction",
+        "./skills/make-automation",
+        "./skills/honest-model-eval",
+        "./skills/compliance-check"
+      ]
     },
     {
       "name": "student-pack",
       "description": "Starter pack for students: hackathon-sprint, exam-sheet, done-gate and loop-breaker in one install.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/hackathon-sprint", "./skills/exam-sheet", "./skills/done-gate", "./skills/loop-breaker"]
+      "skills": [
+        "./skills/hackathon-sprint",
+        "./skills/exam-sheet",
+        "./skills/done-gate",
+        "./skills/loop-breaker"
+      ]
     },
     {
       "name": "done-gate",
       "description": "Verification gate before any work is reported done: the asks rebuilt from the user's words, file:line evidence, a blind subagent audit, and the project's own checks.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/done-gate"]
+      "skills": [
+        "./skills/done-gate"
+      ]
     },
     {
       "name": "loop-breaker",
       "description": "Get out of a debugging loop: stop editing, reproduce by hand, test every assumption, prove the root cause with evidence, then hand off to a fresh session if needed.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/loop-breaker"]
+      "skills": [
+        "./skills/loop-breaker"
+      ]
+    },
+    {
+      "name": "compliance-check",
+      "description": "Catch compliance gaps before a vibe-coded product ships: reads the code, asks what it can't see, maps DPDP, GDPR, the EU AI Act, HIPAA, PCI DSS and more, and pushes a prioritised fix list.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/compliance-check"
+      ]
     },
     {
       "name": "skill-scout",
       "description": "Find skills that fit your project on GitHub (ranked by fit, health and stars, with their open issues), prune the ones you never use, and propose new ones from what you repeat.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/skill-scout"]
+      "skills": [
+        "./skills/skill-scout"
+      ]
     },
     {
       "name": "doc-extraction",
       "description": "Document extraction you can trust: text layer first, OCR with page-to-page context, validators that decide what is correct, one adapter per layout, and human review.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/doc-extraction"]
+      "skills": [
+        "./skills/doc-extraction"
+      ]
     },
     {
       "name": "make-automation",
       "description": "Make.com automations done right: when to use Make, Python or both, webhooks between them, Teams and other painful APIs, human approval, dedupe, dry runs and error handling.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/make-automation"]
+      "skills": [
+        "./skills/make-automation"
+      ]
     },
     {
       "name": "honest-model-eval",
       "description": "Keep ML models honest: audit the data first, a prediction-time contract against leakage, time-based splits, market baselines, calibration, and a data-audit script.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/honest-model-eval"]
+      "skills": [
+        "./skills/honest-model-eval"
+      ]
     },
     {
       "name": "hackathon-sprint",
       "description": "Build to win a hackathon with an AI agent: pick the category, mine open source first, scope to one flawless demo path, deploy for real, and nail the deck and demo.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/hackathon-sprint"]
+      "skills": [
+        "./skills/hackathon-sprint"
+      ]
     },
     {
       "name": "android-device-test",
       "description": "Test an Android app on a real phone over adb: install, tap real UI elements, kill the network and the process, report pass or fail with screenshots and logcat.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/android-device-test"]
+      "skills": [
+        "./skills/android-device-test"
+      ]
     },
     {
       "name": "exam-sheet",
       "description": "Turn a syllabus and past papers into one printable revision page, chapters ranked by the marks they actually carried, every topic an exam-ready answer with a diagram.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/exam-sheet"]
+      "skills": [
+        "./skills/exam-sheet"
+      ]
     }
   ]
 }
