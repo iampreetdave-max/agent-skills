@@ -1,4 +1,4 @@
-# Install signal for preet-skills
+# Install signal for iampreetdave-skills
 
 Every `/plugin marketplace add` or update clones this repo, so **unique cloners** is the closest
 public signal to installs. It also counts updates, CI and bots, and GitHub reports it a day late.
