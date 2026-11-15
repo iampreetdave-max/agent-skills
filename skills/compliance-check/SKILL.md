@@ -1,6 +1,6 @@
 ---
 name: compliance-check
-description: Catch compliance gaps before a vibe-coded product ships. Reads the codebase to learn what the product does, what personal data it touches and which third parties see it, asks only the questions code cannot answer (where users are, minors, payments, health or financial data, AI decisions about people), maps that to the laws and standards that likely apply (India's DPDP Act, GDPR, the EU AI Act, CCPA, COPPA, HIPAA, PCI DSS, accessibility, email and SMS consent), finds the concrete gaps with file:line evidence, and pushes a prioritised fix list. Use when the user is building or launching a product, says "is this compliant", "what laws apply", "privacy policy", "GDPR", "DPDP", "HIPAA", "can I launch this", or adds payments, accounts, analytics, AI features or user data. Not legal advice.
+description: Catch compliance gaps before a vibe-coded product ships. Reads the codebase to learn what the product does, what personal data it touches and which third parties see it, asks only the questions code cannot answer (where users are, minors, payments, health or financial data, AI decisions about people), maps that to the laws and standards that likely apply (India's DPDP Act, GDPR, the EU AI Act, CCPA, COPPA, HIPAA, PCI DSS, accessibility, email and SMS consent), finds the concrete gaps with file:line evidence, checks that no secret file or internal endpoint is reachable on the live site or listed in robots.txt, the sitemap or llms.txt, and pushes a prioritised fix list. Use when the user is building or launching a product, says "is this compliant", "what laws apply", "privacy policy", "GDPR", "DPDP", "HIPAA", "can I launch this", or adds payments, accounts, analytics, AI features or user data, and before or after any deploy ("is anything exposed", ".env leaked", "secrets in public"). Not legal advice.
 ---
 
 # Compliance check
@@ -72,11 +72,29 @@ For each gap: what is wrong, the evidence at `file:line`, which regime it breaks
 - Secrets in the repo. Passwords stored without hashing. No rate limit on auth.
 - Data stored in a region the law or the customer doesn't allow.
 
-## 5. Prioritise and nudge
+## 5. Nothing secret may be reachable
+
+AI-built projects leak in two ways: a secret file lands in a folder that gets published, or an internal endpoint gets written into something public. Bots try `/.env`, `/.git/config` and `/google-credentials.json` on every site, every day. Check both before launch and after every deploy:
+
+```
+python scripts/exposure_check.py --dir public --dir <build output> --url https://<live site>
+```
+
+It flags secret files and secret-looking strings in published folders, probes the paths scanners try on the live site (a path counts only if it answers with something other than the normal not-found page), and reads `robots.txt`, `sitemap.xml` and `llms.txt` for internal endpoints. Exit code 1 means something is EXPOSED. Then hold these rules:
+
+- Secrets live only in the host's secret store or a git-ignored `.env`, never in `public/`, `static/`, the build output or a `NEXT_PUBLIC_` / `VITE_` variable (those are shipped to every browser).
+- Never list internal endpoints (`/api/*`, `/admin`, debug, health, webhook or preview URLs) in `robots.txt`, the sitemap, `llms.txt`, the README or docs an AI writes. A `Disallow` line hides nothing; it advertises the path. Protect the endpoint with auth instead and leave it unlisted.
+- Every admin, debug and internal route checks auth on the server. Being unlinked is not protection.
+- Production source maps off unless they are wanted.
+- A secret that was ever public, even for a minute or in git history, is burned: rotate it, then remove it.
+
+Add each finding to the gaps in step 4 with its fix, as **Before launch**.
+
+## 6. Prioritise and nudge
 
 Sort fixes into **Before launch**, **Before scaling or selling to businesses**, and **Later**. Be direct about why each matters, using the concrete consequence: fines, payment-provider termination, app-store rejection, a lost enterprise deal. Offer to implement the code fixes now. Policies and agreements are drafts for the user, or their lawyer, to finalise.
 
-## 6. Record it
+## 7. Record it
 
 Write or update `COMPLIANCE.md` in the repo:
 
