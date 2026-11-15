@@ -17,7 +17,7 @@ Skills for Claude Code by [Preet Dave](https://iampreetdave.me). Each one came o
 /plugin install exam-sheet@preet-skills
 ```
 
-Install only the ones you want. Each skill loads when your request matches its description, or call it directly, for example `/done-gate`.
+Install only the ones you want. Each skill loads by itself when your request matches its description, or call it by name, for example `/done-gate:done-gate` (plugin name, then skill name).
 
 ## Without the plugin system
 
