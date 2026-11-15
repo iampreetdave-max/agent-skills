@@ -12,9 +12,9 @@ Skills for Claude Code by [Preet Dave](https://iampreetdave.me). Each one came o
 
 ```
 /plugin marketplace add iampreetdave-max/agent-skills
-/plugin install done-gate@agent-skills
-/plugin install android-device-test@agent-skills
-/plugin install exam-sheet@agent-skills
+/plugin install done-gate@preet-skills
+/plugin install android-device-test@preet-skills
+/plugin install exam-sheet@preet-skills
 ```
 
 Install only the ones you want. Each skill loads when your request matches its description, or call it directly, for example `/done-gate`.
