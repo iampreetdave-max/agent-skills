@@ -72,7 +72,7 @@
     },
     {
       "name": "compliance-check",
-      "description": "Catch compliance gaps before a vibe-coded product ships: reads the code, asks what it can't see, maps DPDP, GDPR, the EU AI Act, HIPAA, PCI DSS and more, and pushes a prioritised fix list.",
+      "description": "Catch compliance gaps before a vibe-coded product ships: reads the code, asks what it can't see, maps DPDP, GDPR, the EU AI Act, HIPAA, PCI DSS and more, checks no secret file or internal endpoint is reachable, and pushes a prioritised fix list.",
       "source": "./",
       "strict": false,
       "skills": [
