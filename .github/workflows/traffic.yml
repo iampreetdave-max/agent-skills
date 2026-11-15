@@ -1,0 +1,37 @@
+name: Record install signal
+
+# Once a day, save GitHub's 14-day clone and view counts to the `stats` branch so the history
+# outlives GitHub's window. The numbers live on their own branch so daily commits never show up
+# as skill updates for people who installed from main.
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: main
+      - uses: actions/checkout@v4
+        with:
+          ref: stats
+          path: stats
+      - name: Snapshot traffic
+        working-directory: stats
+        env:
+          TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+        run: python ../main/.github/traffic.py
+      - name: Commit to the stats branch
+        working-directory: stats
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add traffic.json README.md
+          git diff --cached --quiet || git commit -m "Install signal $(date -u +%F)"
+          git push origin stats
