@@ -132,22 +132,22 @@
   },
   "2026-11-15": {
    "clones": {
-    "count": 0,
-    "uniques": 0
+    "count": 116,
+    "uniques": 50
    },
    "views": {
-    "count": 0,
-    "uniques": 0
+    "count": 2,
+    "uniques": 2
    }
   },
   "2026-11-16": {
    "clones": {
-    "count": 0,
-    "uniques": 0
+    "count": 33,
+    "uniques": 21
    },
    "views": {
-    "count": 0,
-    "uniques": 0
+    "count": 4,
+    "uniques": 1
    }
   }
  },
@@ -163,6 +163,12 @@
    "stars": 0,
    "unique_cloners_14d": 0,
    "unique_visitors_14d": 0
+  },
+  "2026-11-17": {
+   "forks": 0,
+   "stars": 0,
+   "unique_cloners_14d": 69,
+   "unique_visitors_14d": 2
   }
  }
 }
