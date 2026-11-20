@@ -8,7 +8,7 @@ public signal to installs. It also counts updates, CI and bots, and GitHub repor
 - Clones since 2026-11-02: 174; page views: 6
 - Stars: 0 · Forks: 0
 
-Updated 2026-11-19 by `.github/workflows/traffic.yml`.
+Updated 2026-11-20 by `.github/workflows/traffic.yml`.
 
 | Day | Unique cloners | Clones | Unique visitors | Views |
 |---|---|---|---|---|
