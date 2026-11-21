@@ -169,6 +169,26 @@
     "count": 0,
     "uniques": 0
    }
+  },
+  "2026-11-19": {
+   "clones": {
+    "count": 2,
+    "uniques": 1
+   },
+   "views": {
+    "count": 0,
+    "uniques": 0
+   }
+  },
+  "2026-11-20": {
+   "clones": {
+    "count": 21,
+    "uniques": 13
+   },
+   "views": {
+    "count": 0,
+    "uniques": 0
+   }
   }
  },
  "snapshots": {
@@ -206,6 +226,12 @@
    "forks": 0,
    "stars": 0,
    "unique_cloners_14d": 82,
+   "unique_visitors_14d": 2
+  },
+  "2026-11-21": {
+   "forks": 0,
+   "stars": 0,
+   "unique_cloners_14d": 93,
    "unique_visitors_14d": 2
   }
  }
