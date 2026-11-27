@@ -239,6 +239,16 @@
     "count": 0,
     "uniques": 0
    }
+  },
+  "2026-11-26": {
+   "clones": {
+    "count": 6,
+    "uniques": 4
+   },
+   "views": {
+    "count": 5,
+    "uniques": 5
+   }
   }
  },
  "snapshots": {
@@ -313,6 +323,12 @@
    "stars": 0,
    "unique_cloners_14d": 127,
    "unique_visitors_14d": 2
+  },
+  "2026-11-27": {
+   "forks": 0,
+   "stars": 0,
+   "unique_cloners_14d": 130,
+   "unique_visitors_14d": 7
   }
  }
 }
