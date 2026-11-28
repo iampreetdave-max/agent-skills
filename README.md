@@ -3,15 +3,16 @@
 Every `/plugin marketplace add` or update clones this repo, so **unique cloners** is the closest
 public signal to installs. It also counts updates, CI and bots, and GitHub reports it a day late.
 
-- Unique cloners, last 14 days: **130**
-- Sum of daily unique cloners since 2026-11-02: **149**
-- Clones since 2026-11-02: 270; page views: 11
+- Unique cloners, last 14 days: **138**
+- Sum of daily unique cloners since 2026-11-02: **161**
+- Clones since 2026-11-02: 287; page views: 11
 - Stars: 0 · Forks: 0
 
-Updated 2026-11-27 by `.github/workflows/traffic.yml`.
+Updated 2026-11-28 by `.github/workflows/traffic.yml`.
 
 | Day | Unique cloners | Clones | Unique visitors | Views |
 |---|---|---|---|---|
+| 2026-11-27 | 12 | 17 | 0 | 0 |
 | 2026-11-26 | 4 | 6 | 5 | 5 |
 | 2026-11-25 | 2 | 3 | 0 | 0 |
 | 2026-11-24 | 1 | 2 | 0 | 0 |
